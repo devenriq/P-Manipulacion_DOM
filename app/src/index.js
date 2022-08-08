@@ -1,10 +1,12 @@
-/**
- * This file is just a silly example to show everything working in the browser.
- * When you're ready to start on your site, clear the file. Happy hacking!
- **/
-
 const url = "https://platzi-avo.vercel.app/api/avo";
 const appNode = document.querySelector("#app");
+
+appNode.addEventListener("click", (event) => {
+  if (event.target.nodeName === "H2") {
+    window.alert("hola");
+  }
+});
+
 const formatPrice = (price) => {
   const newPrice = new window.Intl.NumberFormat("en-EN", {
     style: "currency",
@@ -39,11 +41,5 @@ window
     });
     appNode.append(...allItems);
   });
-
-console.log("simple thing to prevent the github rank");
-console.log("simple thing to prevent the github rank");
-console.log("simple thing to prevent the github rank");
-console.log("simple thing to prevent the github rank");
-console.log("simple thing to prevent the github rank");
 
 //
